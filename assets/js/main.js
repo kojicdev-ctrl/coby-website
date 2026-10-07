@@ -13,6 +13,11 @@ if (has('.projects-track')) import('./projects.js').then(m => { m.initProjects()
 if (has('.colorway')) import('./colors.js').then(m => m.initColors());
 if (has('#pocetak')) import('./hero.js').then(m => m.initHero()).catch(err => console.error('Hero animacija nije pokrenuta', err));
 
+// Premium efekti samo za računare (miš); telefon ostaje lagan i ne učitava ih
+if (matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1000px)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  import('./fx.js').then(m => m.initFx()).catch(() => {});
+}
+
 subscribe((st, patch) => {
   if (patch.lang) {
     applyI18n();

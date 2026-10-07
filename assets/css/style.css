@@ -567,6 +567,57 @@ html.menu-open .site-header { background: transparent; box-shadow: none; }
   }
   .intro.is-active { transform: none; }
 }
+/* ---------- Premium efekti: samo miš + računar (fx.js). Telefon ih ne dobija. ---------- */
+@media (hover: hover) and (pointer: fine) and (min-width: 1000px) {
+  .fx .card, .fx .project, .fx .feature, .fx .service, .fx .more-link {
+    position: relative; overflow: hidden;
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.35s, background 0.35s;
+    will-change: transform;
+  }
+  .fx .card.is-hot.is-hot, .fx .project.is-hot.is-hot {
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-8px) scale(1.015);
+    transition: transform 0.18s ease-out, box-shadow 0.45s var(--ease);
+    box-shadow: 0 30px 60px -18px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(214, 160, 110, 0.35);
+  }
+  .fx .feature.is-hot.is-hot, .fx .service.is-hot.is-hot, .fx .more-link.is-hot.is-hot {
+    transform: translateY(-5px);
+    border-color: rgba(214, 160, 110, 0.55);
+    box-shadow: 0 22px 44px -20px rgba(0, 0, 0, 0.65);
+  }
+  /* svetli odsjaj koji prati miša */
+  .fx .card::before, .fx .project::before, .fx .feature::before, .fx .service::before, .fx .more-link::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 226, 190, 0.16), transparent 55%);
+    opacity: 0; transition: opacity 0.35s;
+  }
+  .fx .is-hot::before { opacity: 1; }
+  .fx .card-body, .fx .project figcaption { z-index: 2; }
+  .fx .feature > *, .fx .service > *, .fx .more-link > * { position: relative; }
+  .fx .card img, .fx .project img { transition: transform 1.1s var(--ease); }
+  .fx .project:hover img { transform: scale(1.06); }
+  .fx .card:hover .card-more, .fx .card.is-hot .card-more { letter-spacing: 0.02em; }
+  .fx .card-more { transition: letter-spacing 0.35s var(--ease); }
+  .fx .more-link:hover svg { transform: translateX(6px); }
+  .fx .more-link svg { transition: transform 0.3s var(--ease); }
+
+  /* dugmad: podizanje i sjaj */
+  .fx .btn { transition: background 0.25s, transform 0.25s var(--ease), box-shadow 0.3s; }
+  .fx .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(214, 160, 110, 0.55); }
+  .fx .btn:active { transform: scale(0.98); }
+  .fx .btn-ghost:hover { box-shadow: inset 0 0 0 1px var(--accent), 0 14px 30px -14px rgba(0, 0, 0, 0.6); }
+  .fx .footer-links a, .fx .menu-nav a { transition: color 0.25s, transform 0.25s var(--ease); }
+  .fx .footer-links a:hover { transform: translateX(3px); }
+
+  /* pojavljivanje pri skrolu */
+  .fx .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease) var(--d, 0ms), transform 0.8s var(--ease) var(--d, 0ms); }
+  .fx .reveal.is-in { opacity: 1; transform: none; }
+  /* posle pojavljivanja kartice se vraćaju na svoje brze prelaze */
+  .fx .card.reveal.is-in, .fx .project.reveal.is-in, .fx .feature.reveal.is-in, .fx .service.reveal.is-in, .fx .more-link.reveal.is-in {
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.35s, background 0.35s, opacity 0.8s var(--ease) var(--d, 0ms);
+  }
+}
+
 /* Nizak široki ekran (telefon okrenut vodoravno): manji naslov da ne uđe pod zaglavlje */
 @media (min-aspect-ratio: 1/1) and (max-height: 520px) {
   .intro { bottom: calc(60px + var(--safe-b)); }
