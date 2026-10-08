@@ -17,7 +17,7 @@
   --ink: #1d1a17;
   --ink-muted: #6b6258;
   --ink-line: rgba(29, 26, 23, 0.12);
-  --wa: #25d366;
+  --wa: #f2ebe1;
 
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -458,8 +458,8 @@ html.menu-open .site-header { background: transparent; box-shadow: none; }
 .more-link:hover { border-color: var(--accent); background: var(--surface-2); }
 .more-link svg { width: 22px; height: 22px; flex: none; color: var(--accent-strong); }
 
-.btn-wa { background: var(--wa); color: #06260f; }
-.btn-wa:hover { background: #3ee07a; }
+.btn-wa { background: #f2ebe1; color: #1a1612; }
+.btn-wa:hover { background: var(--accent-strong); color: #1a1612; }
 
 /* O firmi */
 .about { display: grid; gap: 28px; }

@@ -16,24 +16,24 @@ export const CONFIG = {
   },
 
   // Palete boja na stranicama proizvoda. Kad boja ima `image`, klik na nju menja glavnu sliku na stranici
-  // (npr. image: 'assets/img/kamen-bela.webp'). Boja bez `image` ostavlja trenutnu sliku.
+  // (npr. image: '/assets/img/kamen-bela.webp'). Boja bez `image` ostavlja trenutnu sliku.
   products: [
     {
       id: 'kamen',
       name: { sr: 'Kamene ploče za ogradu', en: 'Stone panels for fences' },
       colors: [
-        { id: 'antracit', hex: '#57534e', image: 'assets/img/kamen-antracit.webp', name: { sr: 'Antracit', en: 'Anthracite' } },
-        { id: 'siva', hex: '#8f8c87', image: 'assets/img/kamen-siva.webp', name: { sr: 'Siva', en: 'Grey' } },
-        { id: 'bela', hex: '#e2ded7', image: 'assets/img/kamen-bela.webp', name: { sr: 'Bela', en: 'White' } },
-        { id: 'krem', hex: '#d3c8b2', image: 'assets/img/kamen-krem.webp', name: { sr: 'Krem', en: 'Cream' } },
-        { id: 'terakota', hex: '#c0613f', image: 'assets/img/kamen-terakota.webp', name: { sr: 'Terakota', en: 'Terracotta' } },
+        { id: 'antracit', hex: '#57534e', image: '/assets/img/kamen-antracit.webp', name: { sr: 'Antracit', en: 'Anthracite' } },
+        { id: 'siva', hex: '#8f8c87', image: '/assets/img/kamen-siva.webp', name: { sr: 'Siva', en: 'Grey' } },
+        { id: 'bela', hex: '#e2ded7', image: '/assets/img/kamen-bela.webp', name: { sr: 'Bela', en: 'White' } },
+        { id: 'krem', hex: '#d3c8b2', image: '/assets/img/kamen-krem.webp', name: { sr: 'Krem', en: 'Cream' } },
+        { id: 'terakota', hex: '#c0613f', image: '/assets/img/kamen-terakota.webp', name: { sr: 'Terakota', en: 'Terracotta' } },
       ],
     },
     {
       id: 'cigla',
       name: { sr: 'Ukrasne fasadne cigle', en: 'Decorative facade bricks' },
       colors: [
-        { id: 'narandzasta', hex: '#c7804e', image: 'assets/img/cigla-narandzasta.webp', name: { sr: 'Narandžasta', en: 'Orange' } },
+        { id: 'narandzasta', hex: '#c7804e', image: '/assets/img/cigla-narandzasta.webp', name: { sr: 'Narandžasta', en: 'Orange' } },
         { id: 'crvena', hex: '#96453a', name: { sr: 'Crvena', en: 'Red' } },
         { id: 'bela', hex: '#e9e5dc', name: { sr: 'Bela', en: 'White' } },
         { id: 'pesak', hex: '#dacda6', name: { sr: 'Pesak', en: 'Sand' } },
@@ -46,7 +46,7 @@ export const CONFIG = {
   // TODO: prave fotografije realizovanih projekata. Kartica bez slike se prikazuje kao "uskoro".
   projects: [
     {
-      image: 'assets/img/projekat-zid.webp',
+      image: '/assets/img/projekat-zid.webp',
       category: 'ograda',
       title: { sr: 'Zid od dekorativnog kamena', en: 'Decorative stone wall' },
       meta: { sr: 'Kamen · Antracit', en: 'Stone · Anthracite' },
