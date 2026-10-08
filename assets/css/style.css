@@ -629,3 +629,11 @@ html.menu-open .site-header { background: transparent; box-shadow: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
 }
+
+/* Kontakt u podnožju */
+.contact { margin: 4px 0 22px; }
+.site-footer .contact-title { font-size: 1.15rem; font-weight: 600; margin: 0 0 12px; color: var(--text); }
+.contact-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact-link { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 22px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.contact-link:hover, .contact-link:focus-visible { background: var(--accent-strong); border-color: var(--accent-strong); color: #1a1612; }
+@media (max-width: 480px) { .contact-row { flex-direction: column; } .contact-link { width: 100%; } }

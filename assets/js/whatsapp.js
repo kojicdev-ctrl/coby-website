@@ -8,4 +8,8 @@ export function initWhatsApp() {
     if (a.dataset.waColor) text += `\n${t('wa.color')}: ${a.dataset.waColor}`;
     a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
   });
+  document.querySelectorAll('[data-viber]').forEach(a => { a.href = `viber://chat?number=%2B${CONFIG.viber}`; });
+  document.querySelectorAll('[data-mail]').forEach(a => {
+    a.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('JSK Enterijer')}`;
+  });
 }

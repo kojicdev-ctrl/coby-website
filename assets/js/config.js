@@ -3,6 +3,9 @@
 export const CONFIG = {
   // TODO: pravi WhatsApp broj, međunarodni format bez "+" i bez početne nule (npr. 381641234567)
   whatsapp: '381600000000',
+  // TODO: pravi Viber broj (isti format kao WhatsApp) i pravi Gmail firme
+  viber: '381600000000',
+  email: 'cofikojic@gmail.com',
 
   hero: {
     // Uspravni ekrani (telefon): 9:16 animacija

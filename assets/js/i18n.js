@@ -62,7 +62,8 @@ const DICT = {
     'about.p3': 'Cena prema vašem objektu, bez skrivenih stavki.',
     'about.badge': 'Pouzdan preduzetnik 2026, CompanyWall',
 
-    'footer.contact': 'Kontakt i lokacija uskoro.',
+    'footer.contact': 'Imate nešto na umu? Javite nam se.',
+    'footer.email': 'E-pošta',
     'footer.rights': 'Sva prava zadržana.',
 
     'page.home': 'Početna',
@@ -260,7 +261,8 @@ const DICT = {
     'about.p3': 'Priced for your building, no hidden items.',
     'about.badge': 'Reliable Entrepreneur 2026, CompanyWall',
 
-    'footer.contact': 'Contact and location coming soon.',
+    'footer.contact': 'Got something on your mind? Get in touch.',
+    'footer.email': 'Email',
     'footer.rights': 'All rights reserved.',
 
     'page.home': 'Home',
